@@ -8,6 +8,7 @@
 package tools
 
 import (
+	_ "github.com/golangci/golangci-lint/cmd/golangci-lint"
 	_ "github.com/google/addlicense"
 	_ "github.com/google/osv-scanner/cmd/osv-scanner"
 	_ "github.com/incu6us/goimports-reviser/v3"

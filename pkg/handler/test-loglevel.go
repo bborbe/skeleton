@@ -20,6 +20,6 @@ func NewTestLoglevelHandler() http.Handler {
 		glog.V(2).Infof("info 2")
 		glog.V(3).Infof("info 3")
 		glog.V(4).Infof("info 4")
-		libhttp.WriteAndGlog(resp, "test loglevel completed")
+		_, _ = libhttp.WriteAndGlog(resp, "test loglevel completed")
 	})
 }

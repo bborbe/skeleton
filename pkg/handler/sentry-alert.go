@@ -26,6 +26,6 @@ func NewSentryAlertHandler(sentryClient libsentry.Client) http.Handler {
 			},
 			nil,
 		)
-		libhttp.WriteAndGlog(resp, "send sentry alert '%s' completed", *result)
+		_, _ = libhttp.WriteAndGlog(resp, "send sentry alert '%s' completed", *result)
 	})
 }

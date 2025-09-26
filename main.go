@@ -69,12 +69,12 @@ func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) er
 
 	return service.Run(
 		ctx,
-		a.createHttpServer(sentryClient, db),
+		a.createHTTPServer(sentryClient, db),
 	)
 
 }
 
-func (a *application) createHttpServer(
+func (a *application) createHTTPServer(
 	sentryClient libsentry.Client,
 	db libkv.DB,
 ) run.Func {
