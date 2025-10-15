@@ -25,6 +25,9 @@ test:
 
 check: lint vet errcheck vulncheck osv-scanner gosec trivy
 
+lint:
+	go run -mod=mod github.com/golangci/golangci-lint/cmd/golangci-lint run --config .golangci.yml ./...
+
 vet:
 	go vet -mod=mod $(shell go list -mod=mod ./... | grep -v /vendor/)
 
@@ -48,9 +51,6 @@ gosec:
 
 trivy:
 	trivy fs --scanners vuln,secret --quiet --no-progress --disable-telemetry --exit-code 1 .
-
-lint:
-	go run -mod=mod github.com/golangci/golangci-lint/cmd/golangci-lint run --config .golangci.yml ./...
 
 addlicense:
 	go run -mod=mod github.com/google/addlicense -c "Benjamin Borbe" -y $$(date +'%Y') -l bsd $$(find . -name "*.go" -not -path './vendor/*')
