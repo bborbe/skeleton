@@ -8,6 +8,12 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.0
+
+- Add build metadata support (Git version, commit hash, and build timestamp)
+- Docker container now exposes build information via environment variables
+- Build metadata automatically injected during Docker build process
+
 ## v0.1.0
 
 - Initial release
