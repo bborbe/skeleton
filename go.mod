@@ -2,15 +2,6 @@ module github.com/bborbe/skeleton
 
 go 1.25.2
 
-exclude (
-	cloud.google.com/go v0.26.0
-	golang.org/x/tools v0.38.0
-	sigs.k8s.io/structured-merge-diff/v6 v6.0.0
-	sigs.k8s.io/structured-merge-diff/v6 v6.1.0
-	sigs.k8s.io/structured-merge-diff/v6 v6.2.0
-	sigs.k8s.io/structured-merge-diff/v6 v6.3.0
-)
-
 require (
 	github.com/bborbe/boltkv v1.10.5
 	github.com/bborbe/errors v1.3.1
@@ -322,6 +313,7 @@ require (
 	github.com/secDre4mer/pkcs7 v0.0.0-20240322103146-665324a4461d // indirect
 	github.com/sergi/go-diff v1.4.0 // indirect
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
+	github.com/shoenig/go-modtool v0.4.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/sivchari/containedctx v1.0.3 // indirect
 	github.com/sivchari/tenv v1.12.1 // indirect
@@ -425,4 +417,13 @@ require (
 	osv.dev/bindings/go v0.0.0-20250929041518-3b73304a1688 // indirect
 	sigs.k8s.io/yaml v1.5.0 // indirect
 	www.velocidex.com/golang/regparser v0.0.0-20250203141505-31e704a67ef7 // indirect
+)
+
+exclude (
+	cloud.google.com/go v0.26.0
+	golang.org/x/tools v0.38.0
+	sigs.k8s.io/structured-merge-diff/v6 v6.0.0
+	sigs.k8s.io/structured-merge-diff/v6 v6.1.0
+	sigs.k8s.io/structured-merge-diff/v6 v6.2.0
+	sigs.k8s.io/structured-merge-diff/v6 v6.3.0
 )
