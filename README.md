@@ -1,6 +1,6 @@
 # Go Microservice Skeleton
 
-A demonstration project showcasing how to build a complete Go microservice using modern technologies. This skeleton serves as both a learning example and a practical starting point for developers who want to build similar services.
+**A template/skeleton project for creating new Go microservices.** This project demonstrates patterns and integration of common technologies, serving as a copy-paste starting point for new services rather than a complete production implementation.
 
 ## Technologies Demonstrated
 
@@ -78,4 +78,14 @@ Standard Go microservice architecture:
 
 ## Testing
 
-Uses Ginkgo BDD framework with Gomega matchers. Run tests with `make test` or `ginkgo run ./...`.  
+Uses Ginkgo BDD framework with Gomega matchers. Run tests with `make test` or `ginkgo run ./...`.
+
+Example tests are included to demonstrate testing patterns - copy and adapt these when building your service.
+
+## Usage as Template
+
+1. Copy this repository as a starting point for your new service
+2. Update service name throughout (replace "skeleton")
+3. Modify handlers and add your business logic
+4. Update configuration in `example.env` and K8s manifests
+5. Implement your specific Kafka consumers/producers and database schema  
