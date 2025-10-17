@@ -8,6 +8,12 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.1
+
+- Add GoDoc comments for all exported handler and factory functions
+- Improve error handling consistency by replacing errors.Wrapf with errors.Wrap
+- Add pkg test suite setup with Ginkgo v2 and Gomega
+
 ## v0.2.0
 
 - Add build metadata support (Git version, commit hash, and build timestamp)

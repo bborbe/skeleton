@@ -13,6 +13,8 @@ import (
 	"github.com/getsentry/sentry-go"
 )
 
+// NewSentryAlertHandler creates an HTTP handler that sends a test alert to Sentry.
+// It captures an exception with additional context data to verify Sentry integration.
 func NewSentryAlertHandler(sentryClient libsentry.Client) http.Handler {
 	return http.HandlerFunc(func(resp http.ResponseWriter, req *http.Request) {
 		ctx := req.Context()

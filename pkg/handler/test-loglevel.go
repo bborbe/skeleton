@@ -11,6 +11,8 @@ import (
 	"github.com/golang/glog"
 )
 
+// NewTestLoglevelHandler creates an HTTP handler that tests different glog verbosity levels.
+// It logs messages at various levels to verify logging configuration.
 func NewTestLoglevelHandler() http.Handler {
 	return http.HandlerFunc(func(resp http.ResponseWriter, req *http.Request) {
 		glog.Errorf("error")

@@ -50,7 +50,7 @@ func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) er
 		libkafka.ParseBrokersFromString(a.KafkaBrokers),
 	)
 	if err != nil {
-		return errors.Wrapf(ctx, err, "create sarama client failed")
+		return errors.Wrap(ctx, err, "create sarama client failed")
 	}
 	defer saramaClient.Close()
 
@@ -60,13 +60,13 @@ func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) er
 		serviceName,
 	)
 	if err != nil {
-		return errors.Wrapf(ctx, err, "create sync producer failed")
+		return errors.Wrap(ctx, err, "create sync producer failed")
 	}
 	defer syncProducer.Close()
 
 	db, err := libboltkv.OpenDir(ctx, a.DataDir)
 	if err != nil {
-		return errors.Wrapf(ctx, err, "open db failed")
+		return errors.Wrap(ctx, err, "open db failed")
 	}
 	defer db.Close()
 
