@@ -3,7 +3,6 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/bborbe/skeleton.svg)](https://pkg.go.dev/github.com/bborbe/skeleton)
 [![CI](https://github.com/bborbe/skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/bborbe/skeleton/actions/workflows/ci.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bborbe/skeleton)](https://goreportcard.com/report/github.com/bborbe/skeleton)
-[![codecov](https://codecov.io/github/bborbe/skeleton/branch/master/graph/badge.svg)](https://codecov.io/github/bborbe/skeleton)
 
 **A template/skeleton project for creating new Go microservices.** This project demonstrates patterns and integration of common technologies, serving as a copy-paste starting point for new services rather than a complete production implementation.
 
