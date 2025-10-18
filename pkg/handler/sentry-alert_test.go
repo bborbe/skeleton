@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"net/http/httptest"
 
+	sentrymocks "github.com/bborbe/sentry/mocks"
 	"github.com/getsentry/sentry-go"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	sentrymocks "github.com/bborbe/sentry/mocks"
 	"github.com/bborbe/skeleton/pkg/handler"
 )
 

@@ -1,6 +1,13 @@
 # Go Microservice Skeleton
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/bborbe/skeleton.svg)](https://pkg.go.dev/github.com/bborbe/skeleton)
+[![CI](https://github.com/bborbe/skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/bborbe/skeleton/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bborbe/skeleton)](https://goreportcard.com/report/github.com/bborbe/skeleton)
+[![codecov](https://codecov.io/github/bborbe/skeleton/branch/master/graph/badge.svg)](https://codecov.io/github/bborbe/skeleton)
+
 **A template/skeleton project for creating new Go microservices.** This project demonstrates patterns and integration of common technologies, serving as a copy-paste starting point for new services rather than a complete production implementation.
+
+---
 
 ## Technologies Demonstrated
 
@@ -12,6 +19,16 @@
 - **HTTP Services**: RESTful API with standard endpoints
 - **Monitoring**: Prometheus metrics and Sentry error tracking
 - **Security**: Comprehensive vulnerability scanning and license management
+
+---
+
+## Installation
+
+As a template project, you typically copy this repository rather than installing it as a dependency. However, if you need to reference it:
+
+```bash
+go get github.com/bborbe/skeleton
+```
 
 ## Quick Start
 
@@ -76,6 +93,12 @@ Standard Go microservice architecture:
 - `pkg/handler/` - HTTP handlers for various endpoints
 - Uses proven libraries for service framework, HTTP handling, Kafka, database, and monitoring
 
+## API Documentation
+
+For complete API documentation of the handlers and packages, visit [pkg.go.dev](https://pkg.go.dev/github.com/bborbe/skeleton).
+
+---
+
 ## Testing
 
 Uses Ginkgo BDD framework with Gomega matchers. Run tests with `make test` or `ginkgo run ./...`.
@@ -88,4 +111,10 @@ Example tests are included to demonstrate testing patterns - copy and adapt thes
 2. Update service name throughout (replace "skeleton")
 3. Modify handlers and add your business logic
 4. Update configuration in `example.env` and K8s manifests
-5. Implement your specific Kafka consumers/producers and database schema  
+5. Implement your specific Kafka consumers/producers and database schema
+
+---
+
+## License
+
+BSD-style license. See [LICENSE](LICENSE) file for details.

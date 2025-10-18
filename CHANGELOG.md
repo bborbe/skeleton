@@ -8,6 +8,13 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.2
+
+- Add standard Go project badges (Go Reference, CI, Go Report Card, codecov)
+- Add Installation, API Documentation, and License sections to README
+- Add Ginkgo v2 to tools.go for consistent test framework dependency tracking
+- Improve README structure with horizontal rules for better visual separation
+
 ## v0.2.1
 
 - Add GoDoc comments for all exported handler and factory functions
