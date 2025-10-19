@@ -8,6 +8,25 @@
 
 ---
 
+## Table of Contents
+
+* [Technologies Demonstrated](#technologies-demonstrated)
+* [Installation](#installation)
+* [Quick Start](#quick-start)
+* [Standard Endpoints](#standard-endpoints)
+* [Development Commands](#development-commands)
+* [Configuration](#configuration)
+* [Deployment](#deployment)
+  * [Kubernetes](#kubernetes)
+  * [Docker](#docker)
+* [Architecture](#architecture)
+* [API Documentation](#api-documentation)
+* [Testing](#testing)
+* [Usage as Template](#usage-as-template)
+* [License](#license)
+
+---
+
 ## Technologies Demonstrated
 
 - **Go**: Modern Go service with proper project structure
@@ -66,11 +85,23 @@ make precommit # Complete development workflow
 
 ## Configuration
 
-Configuration is managed through environment variables (see `example.env`):
-- `KAFKA_BROKERS` - Kafka broker addresses
-- `SKELETON_PORT` - HTTP server port
-- `SENTRY_DSN` - Sentry error tracking DSN
-- `DATADIR` - Database storage directory
+Configuration is managed through environment variables. See `example.env` for development defaults.
+
+### Runtime Configuration
+- `KAFKA_BROKERS` - Kafka broker addresses (default: localhost:9092)
+- `LISTEN` - HTTP server listen address (default: :8080)
+- `SENTRY_DSN` - Sentry error tracking DSN (required for production)
+- `SENTRY_PROXY` - Sentry proxy URL (optional)
+- `DATADIR` - Database storage directory (required)
+- `BATCH_SIZE` - Kafka batch consume size (default: 1)
+
+### Build/Deployment Configuration
+- `DOCKER_REGISTRY` - Docker registry for image publishing
+- `IMAGE` - Docker image name
+- `CLUSTER_CONTEXT` - Kubernetes cluster context
+- `BUILD_GIT_VERSION` - Build version (auto-set in CI/Docker)
+- `BUILD_GIT_COMMIT` - Build commit hash (auto-set in CI/Docker)
+- `BUILD_DATE` - Build timestamp (auto-set in CI/Docker)
 
 ## Deployment
 

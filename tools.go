@@ -8,7 +8,6 @@
 package tools
 
 import (
-	_ "github.com/actgardner/gogen-avro/v9/cmd/gogen-avro"
 	_ "github.com/golangci/golangci-lint/cmd/golangci-lint"
 	_ "github.com/google/addlicense"
 	_ "github.com/google/osv-scanner/v2/cmd/osv-scanner"
@@ -20,5 +19,4 @@ import (
 	_ "github.com/segmentio/golines"
 	_ "github.com/shoenig/go-modtool"
 	_ "golang.org/x/vuln/cmd/govulncheck"
-	_ "k8s.io/code-generator"
 )
