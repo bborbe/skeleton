@@ -93,6 +93,7 @@ func (a *application) createHTTPServer(
 		router.Path("/resetbucket/{BucketName}").Handler(libkv.NewResetBucketHandler(db, cancel))
 		router.Path("/setloglevel/{level}").
 			Handler(log.NewSetLoglevelHandler(ctx, log.NewLogLevelSetter(2, 5*time.Minute)))
+		router.Path("/gc").Handler(libhttp.NewGarbageCollectorHandler())
 		router.Path("/testloglevel").Handler(factory.CreateTestLoglevelHandler())
 		router.Path("/sentryalert").Handler(factory.CreateSentryAlertHandler(sentryClient))
 

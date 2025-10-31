@@ -20,8 +20,12 @@ linters-settings:
     rules:
       Main:
         deny:
-          - pkg: "github.com/pkg/erros"
-            desc: "use github.com/bborbe/erros instead"
+          - pkg: "github.com/pkg/errors"
+            desc: "use github.com/bborbe/errors instead"
+          - pkg: "github.com/bborbe/argument"
+            desc: "use github.com/bborbe/argument/v2 instead"
+          - pkg: "golang.org/x/net/context"
+            desc: "use context from standard library instead"
 
 issues:
   exclude-rules:
@@ -35,3 +39,6 @@ issues:
     - linters:
         - revive
       text: "unused-parameter"
+    - linters:
+        - dupl
+      path: "_test\\.go$"

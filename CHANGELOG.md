@@ -8,6 +8,15 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.4
+
+- Add OCI image labels to Dockerfile for better container metadata
+- Enable race detection in test suite for improved concurrency safety testing
+- Add table of contents to README for easier navigation
+- Expand configuration documentation with runtime and build/deployment variables
+- Clean up unused dependencies (move k8s.io/code-generator and gogen-avro to indirect)
+- Remove unused tool imports from tools.go
+
 ## v0.2.3
 
 - Remove codecov badge from README
