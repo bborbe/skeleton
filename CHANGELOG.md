@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.5
+
+- Use relative path in gexec.Build test for improved portability
+
 ## v0.2.4
 
 - Add OCI image labels to Dockerfile for better container metadata
