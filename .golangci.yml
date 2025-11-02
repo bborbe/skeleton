@@ -4,6 +4,7 @@ run:
 
 linters:
   enable:
+    # Core
     - govet
     - errcheck
     - staticcheck
@@ -14,6 +15,24 @@ linters:
     - gocyclo
     - depguard
     - dupl
+
+    # SRP & maintainability
+    - funlen
+    - gocognit
+    - nestif
+    - maintidx
+
+    # Readability & style
+    - gofmt
+    - goimports
+    - errname
+    - unparam
+
+    # Safety / defensive coding
+    - bodyclose
+    - forcetypeassert
+    - asasalint
+    - prealloc
 
 linters-settings:
   depguard:
@@ -31,11 +50,24 @@ linters-settings:
           - pkg: "io/ioutil"
             desc: "deprecated since Go 1.16, use io and os packages instead"
 
+  funlen:
+    lines: 80
+    statements: 50
+
+  gocognit:
+    min-complexity: 20
+
+  nestif:
+    min-complexity: 4
+
+  maintidx:
+    min-maintainability-index: 20
+
 issues:
   exclude-rules:
     - linters:
         - staticcheck
-      text: "SA1019" # allow deprecated in specific cases
+      text: "SA1019"
     - linters:
         - revive
       path: "_test\\.go$"
