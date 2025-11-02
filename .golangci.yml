@@ -28,6 +28,8 @@ linters-settings:
             desc: "use context from standard library instead"
           - pkg: "golang.org/x/lint/golint"
             desc: "deprecated, use revive or staticcheck instead"
+          - pkg: "io/ioutil"
+            desc: "deprecated since Go 1.16, use io and os packages instead"
 
 issues:
   exclude-rules:
