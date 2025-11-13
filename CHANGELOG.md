@@ -8,6 +8,15 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.7
+
+- Update Go version from 1.25.3 to 1.25.4
+- Update containerd from 1.7.27 to 1.7.29 to fix security vulnerabilities
+- Update opencontainers/selinux from 1.12.0 to 1.13.0 to fix security vulnerabilities
+- Update cyphar/filepath-securejoin from 0.5.0 to 0.6.0
+- Add gomodprepare Makefile target for consistent go.mod configuration
+- Add additional k8s.io version excludes to go.mod
+
 ## v0.2.6
 
 - Add depguard rule to block deprecated io/ioutil package
