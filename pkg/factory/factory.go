@@ -9,7 +9,7 @@ import (
 
 	libsentry "github.com/bborbe/sentry"
 
-	"github.com/bborbe/skeleton/pkg/handler"
+	"github.com/bborbe/go-skeleton/pkg/handler"
 )
 
 // CreateTestLoglevelHandler creates an HTTP handler that tests different glog verbosity levels.

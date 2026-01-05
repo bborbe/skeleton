@@ -1,8 +1,8 @@
 # Go Microservice Skeleton
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/bborbe/skeleton.svg)](https://pkg.go.dev/github.com/bborbe/skeleton)
-[![CI](https://github.com/bborbe/skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/bborbe/skeleton/actions/workflows/ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/bborbe/skeleton)](https://goreportcard.com/report/github.com/bborbe/skeleton)
+[![Go Reference](https://pkg.go.dev/badge/github.com/bborbe/go-skeleton.svg)](https://pkg.go.dev/github.com/bborbe/go-skeleton)
+[![CI](https://github.com/bborbe/go-skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/bborbe/go-skeleton/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bborbe/go-skeleton)](https://goreportcard.com/report/github.com/bborbe/go-skeleton)
 
 **A template/skeleton project for creating new Go microservices.** This project demonstrates patterns and integration of common technologies, serving as a copy-paste starting point for new services rather than a complete production implementation.
 
@@ -45,7 +45,7 @@
 As a template project, you typically copy this repository rather than installing it as a dependency. However, if you need to reference it:
 
 ```bash
-go get github.com/bborbe/skeleton
+go get github.com/bborbe/go-skeleton
 ```
 
 ## Quick Start
@@ -125,7 +125,7 @@ Standard Go microservice architecture:
 
 ## API Documentation
 
-For complete API documentation of the handlers and packages, visit [pkg.go.dev](https://pkg.go.dev/github.com/bborbe/skeleton).
+For complete API documentation of the handlers and packages, visit [pkg.go.dev](https://pkg.go.dev/github.com/bborbe/go-skeleton).
 
 ---
 

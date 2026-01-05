@@ -11,7 +11,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/bborbe/skeleton/pkg/handler"
+	"github.com/bborbe/go-skeleton/pkg/handler"
 )
 
 var _ = Describe("TestLoglevelHandler", func() {
