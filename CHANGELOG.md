@@ -8,6 +8,9 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.10
+- Update Docker image name from bborbe/skeleton to bborbe/go-skeleton
+
 ## v0.2.9
 - Fix module path URLs from skeleton to go-skeleton across all files
 - Update all dependencies to latest versions

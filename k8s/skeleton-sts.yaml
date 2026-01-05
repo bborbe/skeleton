@@ -53,7 +53,7 @@ spec:
               value: '/data'
             - name: KAFKA_BROKERS
               value: '{{ "KAFKA_BROKERS" | env }}'
-          image: '{{"DOCKER_REGISTRY" | env}}/skeleton:{{"BRANCH" | env}}'
+          image: '{{"DOCKER_REGISTRY" | env}}/go-skeleton:{{"BRANCH" | env}}'
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 5
