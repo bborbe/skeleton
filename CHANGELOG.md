@@ -8,6 +8,14 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.11
+
+- update golang to 1.25.6
+- update alpine to 3.23
+- update github.com/bborbe/* dependencies
+- update getsentry/sentry-go to v0.41.0
+- update IBM/sarama to v1.46.3
+
 ## v0.2.10
 - Update Docker image name from bborbe/skeleton to bborbe/go-skeleton
 
