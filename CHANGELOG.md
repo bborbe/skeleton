@@ -8,6 +8,12 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.2.12
+
+- add build info Prometheus metrics with timestamp tracking
+- change BuildDate field to use libtime.DateTime type
+- add GoDoc comments for exported types and functions
+
 ## v0.2.11
 
 - update golang to 1.25.6

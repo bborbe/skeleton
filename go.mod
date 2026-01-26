@@ -16,6 +16,7 @@ require (
 	github.com/bborbe/run v1.9.1
 	github.com/bborbe/sentry v1.9.2
 	github.com/bborbe/service v1.9.1
+	github.com/bborbe/time v1.21.0
 	github.com/getsentry/sentry-go v0.41.0
 	github.com/golang/glog v1.2.5
 	github.com/golangci/golangci-lint v1.64.8
@@ -89,7 +90,6 @@ require (
 	github.com/bborbe/collection v1.20.0 // indirect
 	github.com/bborbe/math v1.3.0 // indirect
 	github.com/bborbe/parse v1.10.0 // indirect
-	github.com/bborbe/time v1.21.0 // indirect
 	github.com/bborbe/validation v1.4.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bkielbasa/cyclop v1.2.3 // indirect

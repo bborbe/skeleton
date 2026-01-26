@@ -18,10 +18,12 @@ import (
 	"github.com/bborbe/run"
 	libsentry "github.com/bborbe/sentry"
 	"github.com/bborbe/service"
+	libtime "github.com/bborbe/time"
 	"github.com/golang/glog"
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
+	"github.com/bborbe/go-skeleton/pkg"
 	"github.com/bborbe/go-skeleton/pkg/factory"
 )
 
@@ -33,18 +35,20 @@ func main() {
 }
 
 type application struct {
-	SentryDSN       string `required:"true"  arg:"sentry-dsn"        env:"SENTRY_DSN"        usage:"SentryDSN"                             display:"length"`
-	SentryProxy     string `required:"false" arg:"sentry-proxy"      env:"SENTRY_PROXY"      usage:"Sentry Proxy"`
-	Listen          string `required:"true"  arg:"listen"            env:"LISTEN"            usage:"address to listen to"`
-	KafkaBrokers    string `required:"true"  arg:"kafka-brokers"     env:"KAFKA_BROKERS"     usage:"Comma separated list of Kafka brokers"`
-	BatchSize       int    `required:"true"  arg:"batch-size"        env:"BATCH_SIZE"        usage:"batch consume size"                                     default:"1"`
-	DataDir         string `required:"true"  arg:"datadir"           env:"DATADIR"           usage:"data directory"`
-	BuildGitVersion string `required:"false" arg:"build-git-version" env:"BUILD_GIT_VERSION" usage:"Build Git version"                                      default:"dev"`
-	BuildGitCommit  string `required:"false" arg:"build-git-commit"  env:"BUILD_GIT_COMMIT"  usage:"Build Git commit hash"                                  default:"none"`
-	BuildDate       string `required:"false" arg:"build-date"        env:"BUILD_DATE"        usage:"Build timestamp"                                        default:"unknown"`
+	SentryDSN       string            `required:"true"  arg:"sentry-dsn"        env:"SENTRY_DSN"        usage:"SentryDSN"                             display:"length"`
+	SentryProxy     string            `required:"false" arg:"sentry-proxy"      env:"SENTRY_PROXY"      usage:"Sentry Proxy"`
+	Listen          string            `required:"true"  arg:"listen"            env:"LISTEN"            usage:"address to listen to"`
+	KafkaBrokers    string            `required:"true"  arg:"kafka-brokers"     env:"KAFKA_BROKERS"     usage:"Comma separated list of Kafka brokers"`
+	BatchSize       int               `required:"true"  arg:"batch-size"        env:"BATCH_SIZE"        usage:"batch consume size"                                     default:"1"`
+	DataDir         string            `required:"true"  arg:"datadir"           env:"DATADIR"           usage:"data directory"`
+	BuildGitVersion string            `required:"false" arg:"build-git-version" env:"BUILD_GIT_VERSION" usage:"Build Git version"                                      default:"dev"`
+	BuildGitCommit  string            `required:"false" arg:"build-git-commit"  env:"BUILD_GIT_COMMIT"  usage:"Build Git commit hash"                                  default:"none"`
+	BuildDate       *libtime.DateTime `required:"false" arg:"build-date"        env:"BUILD_DATE"        usage:"Build timestamp (RFC3339)"`
 }
 
 func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) error {
+	pkg.NewBuildInfoMetrics().SetBuildInfo(a.BuildDate)
+
 	saramaClient, err := libkafka.CreateSaramaClient(
 		ctx,
 		libkafka.ParseBrokersFromString(a.KafkaBrokers),
