@@ -1,6 +1,6 @@
 module github.com/bborbe/go-skeleton
 
-go 1.26.5
+go 1.26.6
 
 require (
 	github.com/bborbe/boltkv v1.14.8
