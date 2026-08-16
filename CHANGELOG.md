@@ -12,6 +12,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 
 - update Go to 1.26.6 and update dependencies (fixes GO-2026-6179, GO-2026-6180, CVE-2026-56864, CVE-2026-56865)
 
+## Unreleased
+
+- feat: opt new repos into `goUpdate.autoUpdate` in `.maintainer.yaml` so `github-update-go-watcher` may file Go-version update tasks for them
+
 ## v0.4.11
 
 - chore(dev): point `.envrc` `--teamvault-config` at `~/.config/teamvault-cli/config.json` (legacy `~/.teamvault.json` removed, so the prior path failed with an empty-URL error)
