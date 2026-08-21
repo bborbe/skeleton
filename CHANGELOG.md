@@ -18,6 +18,7 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+- feat: serve `/healthz` as JSON (`{"status":"ok"}` with `Content-Type: application/json`) so consumers and monitoring tooling can parse the liveness response; route path and k8s liveness probe unchanged
 - feat: opt new repos into `goUpdate.autoUpdate` in `.maintainer.yaml` so `github-update-go-watcher` may file Go-version update tasks for them
 - fix: Reorder `format` target in `Makefile.precommit` so `gofmt -w` runs last (after goimports-reviser and golines), normalizing golines' wrapping so the gofmt lint check passes on the Go 1.27 bump
 - chore: Pin golangci-lint to v2.13.1 (fixes staticcheck `buildir` panic on the Go 1.27 AST) and errcheck to v1.20.0 (fixes `package "context" without types`) in `tools.env`
