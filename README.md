@@ -6,6 +6,8 @@
 
 **A template/skeleton project for creating new Go microservices.** This project demonstrates patterns and integration of common technologies, serving as a copy-paste starting point for new services rather than a complete production implementation.
 
+> **Note (2026-08-21):** temporary doc-only change to exercise the dev pr-review pipeline.
+
 ---
 
 ## Table of Contents
