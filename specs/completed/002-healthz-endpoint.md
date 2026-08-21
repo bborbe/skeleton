@@ -1,8 +1,10 @@
 ---
-status: prompted
+status: completed
 approved: "2026-08-21T15:30:15Z"
 generating: "2026-08-21T15:33:35Z"
 prompted: "2026-08-21T15:36:56Z"
+verifying: "2026-08-21T15:49:11Z"
+completed: "2026-08-21T15:49:19Z"
 branch: dark-factory/healthz-endpoint
 ---
 
