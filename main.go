@@ -90,7 +90,7 @@ func (a *application) createHTTPServer(
 		defer cancel()
 
 		router := mux.NewRouter()
-		router.Path("/healthz").Handler(libhttp.NewPrintHandler("OK"))
+		router.Path("/healthz").Handler(factory.CreateHealthzHandler())
 		router.Path("/readiness").Handler(libhttp.NewPrintHandler("OK"))
 		router.Path("/metrics").Handler(promhttp.Handler())
 		router.Path("/resetdb").Handler(libkv.NewResetHandler(db, cancel))

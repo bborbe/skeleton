@@ -1,6 +1,8 @@
 ---
-status: approved
+status: prompted
 approved: "2026-08-21T15:30:15Z"
+generating: "2026-08-21T15:33:35Z"
+prompted: "2026-08-21T15:36:56Z"
 branch: dark-factory/healthz-endpoint
 ---
 

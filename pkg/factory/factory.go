@@ -21,3 +21,10 @@ func CreateTestLoglevelHandler() http.Handler {
 func CreateSentryAlertHandler(sentryClient libsentry.Client) http.Handler {
 	return handler.NewSentryAlertHandler(sentryClient)
 }
+
+// CreateHealthzHandler creates an HTTP handler that serves the canonical
+// `/healthz` liveness response (HTTP 200, body `{"status":"ok"}`,
+// Content-Type: application/json).
+func CreateHealthzHandler() http.Handler {
+	return handler.NewHealthzHandler()
+}
