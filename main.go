@@ -34,6 +34,11 @@ func main() {
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
 }
 
+// TODO(build-fix-e2e-3): deliberate compile break — fresh green->red
+// transition to re-trigger the build-fix e2e with the agent-build-fix
+// Config CR in place. Remove after the pipeline is proven.
+var buildFixE2E3 = undefinedSymbolForE2E3
+
 type application struct {
 	SentryDSN       string            `required:"true"  arg:"sentry-dsn"        env:"SENTRY_DSN"        usage:"SentryDSN"                             display:"length"`
 	SentryProxy     string            `required:"false" arg:"sentry-proxy"      env:"SENTRY_PROXY"      usage:"Sentry Proxy"`
