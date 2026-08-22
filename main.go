@@ -34,14 +34,6 @@ func main() {
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
 }
 
-// TODO(build-fix-e2e): deliberate compile break to trigger the build-fix
-// agent's e2e. Remove after the pipeline is proven.
-var buildFixE2E = undefinedSymbolForE2E
-
-// TODO(build-fix-e2e-2): second deliberate compile break — fresh episode SHA
-// for a second build-fix e2e run after the assignee routing fix. Remove too.
-var buildFixE2E2 = undefinedSymbolForE2E2
-
 type application struct {
 	SentryDSN       string            `required:"true"  arg:"sentry-dsn"        env:"SENTRY_DSN"        usage:"SentryDSN"                             display:"length"`
 	SentryProxy     string            `required:"false" arg:"sentry-proxy"      env:"SENTRY_PROXY"      usage:"Sentry Proxy"`
