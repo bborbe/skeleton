@@ -169,3 +169,7 @@ Example tests are included to demonstrate testing patterns - copy and adapt thes
 ## License
 
 BSD-style license. See [LICENSE](LICENSE) file for details.
+
+## Webhook e2e test
+
+Temporary change to validate the instant PR-review webhook (2026-08-22). Safe to revert.
