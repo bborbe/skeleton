@@ -175,3 +175,5 @@ BSD-style license. See [LICENSE](LICENSE) file for details.
 Temporary change to validate the instant PR-review webhook (2026-08-22). Safe to revert.
 
 Retest marker (2026-08-22, second attempt).
+
+Third retest marker (2026-08-22) — events now include Pull request.
