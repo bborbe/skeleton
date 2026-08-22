@@ -173,3 +173,5 @@ BSD-style license. See [LICENSE](LICENSE) file for details.
 ## Webhook e2e test
 
 Temporary change to validate the instant PR-review webhook (2026-08-22). Safe to revert.
+
+Retest marker (2026-08-22, second attempt).
