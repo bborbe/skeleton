@@ -29,6 +29,11 @@ import (
 
 const serviceName = "skeleton"
 
+// TODO(build-fix-e2e-4): deliberate compile break — clean green->red
+// transition after holding green for one watcher poll cycle. Remove
+// after the build-fix pipeline is proven.
+var buildFixE2E4 = undefinedSymbolForE2E4
+
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
