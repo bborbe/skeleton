@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 Please choose versions by [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+
+- chore: e2e test of the release-check webhook (2026-08-22)
+
 ## v0.5.0
 
 - feat: add Scaler interface with counterfeiter directive and ParseScalerDefault helper
