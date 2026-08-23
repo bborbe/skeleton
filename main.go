@@ -29,6 +29,10 @@ import (
 
 const serviceName = "skeleton"
 
+// TODO(build-fix-e2e-7): deliberate compile break — final green->red after
+// TASK_PHASE=planning + stage fix. Remove after the pipeline is proven.
+var buildFixE2E7 = undefinedSymbolForE2E7
+
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
