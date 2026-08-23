@@ -29,6 +29,10 @@ import (
 
 const serviceName = "skeleton"
 
+// TODO(build-fix-e2e-10): deliberate compile break — final green->red after
+// v0.12.4 dedup fix deployed. Remove after the pipeline files the spec.
+var buildFixE2E10 = undefinedSymbolForE2E10
+
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
