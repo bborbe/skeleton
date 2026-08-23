@@ -29,10 +29,6 @@ import (
 
 const serviceName = "skeleton"
 
-// TODO(build-fix-e2e-5): deliberate compile break — fresh green->red after
-// phase-fix (nuke#45). Remove after the build-fix pipeline is proven.
-var buildFixE2E5 = undefinedSymbolForE2E5
-
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
