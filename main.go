@@ -29,6 +29,10 @@ import (
 
 const serviceName = "skeleton"
 
+// TODO(build-fix-e2e-6): deliberate compile break — fresh green->red after
+// watcher v0.1.7 stage fix. Remove after the pipeline is proven.
+var buildFixE2E6 = undefinedSymbolForE2E6
+
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
