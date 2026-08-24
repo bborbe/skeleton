@@ -29,6 +29,10 @@ import (
 
 const serviceName = "skeleton"
 
+// TODO(close-on-green-e2e-1): deliberate compile break — fresh green->red for the
+// close-on-green e2e (spec 076). Remove after the vault task auto-closes.
+var closeOnGreenE2E1 = undefinedSymbolForE2E1
+
 func main() {
 	app := &application{}
 	os.Exit(service.Main(context.Background(), app, &app.SentryDSN, &app.SentryProxy))
