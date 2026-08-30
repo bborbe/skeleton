@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 Please choose versions by [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+
+- test: add uptime handler to exercise the dev pr-reviewer rung (2026-08-30)
+
 ## v0.5.1
 
 - chore: e2e test of the release-check webhook (2026-08-22)
