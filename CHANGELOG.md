@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 Please choose versions by [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+
+- feat: serve `/healthz` as JSON (`{"status":"ok"}` with `Content-Type: application/json`) so consumers and monitoring tooling can parse the liveness response; route path and k8s liveness probe unchanged
+- feat: opt new repos into `goUpdate.autoUpdate` in `.maintainer.yaml` so `github-update-go-watcher` may file Go-version update tasks for them
+- fix: Reorder `format` target in `Makefile.precommit` so `gofmt -w` runs last (after goimports-reviser and golines), normalizing golines' wrapping so the gofmt lint check passes on the Go 1.27 bump
+- chore: Pin golangci-lint to v2.13.1 (fixes staticcheck `buildir` panic on the Go 1.27 AST) and errcheck to v1.20.0 (fixes `package "context" without types`) in `tools.env`
+
 ## v0.5.1
 
 - chore: e2e test of the release-check webhook (2026-08-22)
@@ -19,13 +26,6 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 ## v0.4.12
 
 - update Go to 1.26.6 and update dependencies (fixes GO-2026-6179, GO-2026-6180, CVE-2026-56864, CVE-2026-56865)
-
-## Unreleased
-
-- feat: serve `/healthz` as JSON (`{"status":"ok"}` with `Content-Type: application/json`) so consumers and monitoring tooling can parse the liveness response; route path and k8s liveness probe unchanged
-- feat: opt new repos into `goUpdate.autoUpdate` in `.maintainer.yaml` so `github-update-go-watcher` may file Go-version update tasks for them
-- fix: Reorder `format` target in `Makefile.precommit` so `gofmt -w` runs last (after goimports-reviser and golines), normalizing golines' wrapping so the gofmt lint check passes on the Go 1.27 bump
-- chore: Pin golangci-lint to v2.13.1 (fixes staticcheck `buildir` panic on the Go 1.27 AST) and errcheck to v1.20.0 (fixes `package "context" without types`) in `tools.env`
 
 ## v0.4.11
 
